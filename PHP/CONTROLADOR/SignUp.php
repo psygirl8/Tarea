@@ -19,6 +19,8 @@
         header("Location: ./../../index.html");
         } 
 
+        header("Location: ./../../index.html");
+
         echo "<center><h1>".$date."</h1></center>";
         echo $sql;
 
