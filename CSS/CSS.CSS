@@ -1,0 +1,33 @@
+    section{
+
+        display: flex;
+    }
+
+    input{
+
+        margin-right: 10px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+        
+        background-image: url("Imágenes/stars.gif");
+
+    }
+  
+    h1 {
+
+        color: rgb(255, 255, 255);
+        margin-left: 20px;
+
+    }
+ 
+    section{
+    
+        margin-left: 32%;
+        margin-top: 10%;
+        width: 300px;
+        padding: 50px;
+    
+    }

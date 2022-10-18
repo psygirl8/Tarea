@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="../CSS/CSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+        <section> 
+        <center>
+            <table id="table">
+                <tr>
+                    <th>Correo</th>
+                    <th>Contraseña</th>
+                    <th>Nombre</th>
+                    <th>Nacimiento</th>
+                </tr>
+            </table>
+        </center>
+        </section>   
+
+</body>
+            xmlhttp.open("GET", "../PHP/backend-script.php");
+            xmlhttp.send();
+    
+
+    <script>
+
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+            const myObj = JSON.parse(this.responseText);
+            var vari= myObj[1];
+                for(let i = 0; i <myObj.length; i++) {
+                    const table = document.getElementById("table");
+
+                    const fila = document.createElement("tr");
+                    const column1 = document.createElement("th");
+                    const column2 = document.createElement("th");
+                    const column3 = document.createElement("th");
+                    const column4 = document.createElement("th");
+
+            
+                    let val1=document.createTextNode(myObj[i][1-1]);
+                    let val2=document.createTextNode(myObj[i][2-1]);
+                    let val3=document.createTextNode(myObj[i][3-1]);
+                    let val4=document.createTextNode(myObj[i][4-1]);
+
+
+                    column1.appendChild(val1);
+                    column2.appendChild(val2);
+                    column3.appendChild(val3);
+                    column4.appendChild(val4);
+
+
+                    fila.appendChild(column1);
+                    fila.appendChild(column2);
+                    fila.appendChild(column3);
+                    fila.appendChild(column4);
+
+
+                        table.appendChild(fila);
+
+                        table.setAttribute("border", "3");
+              
+                
+            }
+
+        }
+
+    xmlhttp.open("GET", "../PHP/backend-script.php");
+    xmlhttp.send();
+
+    </script>
+
+    
+</body>
+</html>
