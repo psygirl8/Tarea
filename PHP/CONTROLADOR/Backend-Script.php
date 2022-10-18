@@ -1,7 +1,7 @@
 <?php
 
     require_once "../MODELO/ModeloUsuario.php";
-    $obj = new ModeloPersona();
+    $obj = new ModeloPerson();
     $mostrar=$obj->getPerson_ALL();
 
     $myJSON = json_encode($mostrar);
