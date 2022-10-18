@@ -12,7 +12,7 @@
     <title>Document</title>
 
 </head>
-<body>
+<body id="algo">
 
         <section> 
         <center>
@@ -28,16 +28,14 @@
         </section>   
 
 </body>
-            xmlhttp.open("GET", "../PHP/backend-script.php");
-            xmlhttp.send();
-    
-
     <script>
 
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onload = function() {
+            alert(this.responseText);
             const myObj = JSON.parse(this.responseText);
             var vari= myObj[1];
+            alert(vari);
                 for(let i = 0; i <myObj.length; i++) {
                     const table = document.getElementById("table");
 
@@ -75,8 +73,8 @@
 
         }
 
-    xmlhttp.open("GET", "../PHP/backend-script.php");
-    xmlhttp.send();
+        xmlhttp.open("GET", "../PHP/CONTROLADOR/backend-script.php");
+        xmlhttp.send();
 
     </script>
 
