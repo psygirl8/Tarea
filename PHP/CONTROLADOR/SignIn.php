@@ -10,11 +10,13 @@
     /***** */
 
         $obj = new ModeloPerson();
-        $mostrar=$obj->getPersona($correo, $contraseña);
+        $mostrar=$obj->getPerson($correo, $contraseña);
 
         if ($mostrar['Correo']==$correo && $mostrar['Contraseña']==$contraseña) {
             //echo $mostrar['Correo'];
             header("Location: ./../HTML/PaginaDeInicio.html");
+        }else {
+            header("Location: ./../HTML/PaginaDeRegistro.html");Ç
         }
     
 
