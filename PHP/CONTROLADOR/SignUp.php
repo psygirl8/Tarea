@@ -16,7 +16,7 @@
         if (!empty($correo) && !empty($contraseña) && !empty($nombre) && !empty($date)) {
         $obj = new ModeloPerson();
         $obj->setPerson($correo, $contraseña, $nombre, $date);
-        header("Location: ./../index.html");
+        header("Location: ./../../index.html");
         } 
 
         echo "<center><h1>".$date."</h1></center>";
