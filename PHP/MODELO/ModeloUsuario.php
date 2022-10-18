@@ -10,12 +10,12 @@ class ModeloPerson extends ModeloBD
     {
             $sql = "INSERT INTO USUARIOS (Correo, Contraseña, Nombre, Nacimiento) 
             VALUES ('$correo', '$contraseña', '$nombre', '$date')";
-            $this->sentencia_subir($sql);
+            $this->sentencia_uptload($sql);
     }
 
     public function getPerson($correo,$contraseña){
         $sql="SELECT * from USUARIOS where (Correo, Contraseña) = ('$correo','$contraseña')";
-        return $this->sentencia_mostrar($sql);
+        return $this->sentencia_show($sql);
     
     }
     
